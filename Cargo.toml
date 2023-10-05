@@ -1,0 +1,17 @@
+[package]
+name = "blockchain"
+version = "0.1.0"
+edition = "2021"
+author = "Philix"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name= "blockchainlib"
+path="src/lib.rs"
+
+[[bin]]
+name= "blockchainlib"
+path="src/main.rs"
+
+[dependencies]
+hex = "0.4.3"
