@@ -1,4 +1,5 @@
-use super::*;
+use super::hashable::Hashable;
+use std::fmt::Formatter;
 
 // pub mod Block {
 pub struct Block {
@@ -21,7 +22,7 @@ impl Block {
         Block {
             index,
             timestamp,
-            hash: vec![0, 32],
+            hash: String::from("hash value"),
             prev_block_hash,
             nonce,
             payload,
@@ -29,9 +30,14 @@ impl Block {
     }
 }
 
+trait Debug {
+    fn fmt(&self, f: &mut Formatter);
+}
+
 impl Debug for Block {
-    fn fmt(&self, f: &mut Fomatter) -> fmt::Result {
-        print!("Things will get better with time {}", hash_val);
+    // fn fmt(&self, f: &mut Formatter) -> fmt::Result {
+    fn fmt(&self, f: &mut Formatter) {
+        print!("Things will get better with time {}", &self.hash);
         write!(
             f,
             "Block [{}]: {} at: {} with: {}",
@@ -42,4 +48,9 @@ impl Debug for Block {
         );
     }
 }
-// }
+
+impl Hashable for Block {
+    fn bytes(&self) -> Vec<u8> {
+        todo!()
+    }
+}
