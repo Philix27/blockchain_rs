@@ -1,5 +1,30 @@
-# Building a blockchain from scratch using Rust
+# A Distributed Ledger Technology
 
-### TODO
-- Create a block module
-- Create a hash mod
+### Using several blockchain principles such as
+
+- Immutability
+- Distributed
+- Verifiable transaction
+-
+
+### Will not be supporting
+
+- An open ledger
+
+### Use case
+
+- For Fintech startups
+
+### Crates
+
+- Blockchain
+- Messaging
+- Server
+  - Database connection - SQLX
+  - Expose graphql api
+  - Expose rest api
+-
+
+### Setup
+
+- Actix server
